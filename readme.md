@@ -15,7 +15,7 @@ I'm working on adding Simplex Noise and more options to customize the kind of ma
 2. `cd` into the directory
 3. `xmake` to build the neccessary directories
 4. Then you can find a static library in:
-`build/<operating system>/<architecture>/release/cartographer.lib or libcartographer.a
+`build/<operating system>/<architecture>/release/cartographer.lib` or libcartographer.a
 
 Then, just include:
 ```cpp
