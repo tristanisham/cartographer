@@ -1,6 +1,7 @@
 ![logo.png](logo.png)
 # Cartographer
 A little library for generating heightmaps using a variety of algorithms.
+[Documentation](./Documentation.md)
 
 ## Current Algorithms
 - Perlin Noise
@@ -17,10 +18,14 @@ I'm working on adding Simplex Noise and more options to customize the kind of ma
 `build/<operating system>/<architecture>/release/cartographer.lib or libcartographer.a
 
 Then, just include:
-` #include "src/cartographer.hpp"`
+```cpp
+ #include "src/cartographer.hpp"
+ ```
 
 #### Including in your project
 g++ your_main.cpp src/lodepng.cpp src/cartographer.cpp -Isrc -03
 
 Then, just include:
-` #include "src/cartographer.hpp"`
+```cpp
+ #include "src/cartographer.hpp"
+ ```

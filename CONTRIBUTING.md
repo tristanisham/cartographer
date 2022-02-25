@@ -1,0 +1,2 @@
+# Contributing
+- All features and changes should be made by pull request. All contributions are welcome but generally new featues will be tracked using [Github Projects](https://github.com/tristanisham/cartographer/projects).
