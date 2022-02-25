@@ -11,7 +11,7 @@ target("cartographer")
 --     set_kind("binary")
 --     add_deps("cartographer")
 --     set_languages("cxx20")
---     add_files("src/main.cpp")
+--     add_files("example/demo.cpp")
     
 
 --

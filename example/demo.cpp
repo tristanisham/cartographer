@@ -1,4 +1,4 @@
-#include "cartographer.hpp"
+#include "../src/cartographer.hpp"
 
 int main(int argc, char const *argv[])
 {
