@@ -23,7 +23,7 @@ Cartographer::Cartographer(long long seed, int x, int y, std::vector<std::vector
     }
 }
 
-Cartographer Cartographer::typial(int width, int height)
+Cartographer Cartographer::typical(int width, int height)
 {
     long long ss = Cartographer::genSeed();
     

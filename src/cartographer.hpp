@@ -25,7 +25,7 @@ public:
     enum class NoiseType {
         PERLIN
     };
-    static Cartographer typial(int width, int height);
+    static Cartographer typical(int width, int height);
     void createPNG(const char *filename, NoiseType noise);
 
 private:
