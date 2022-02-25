@@ -15,14 +15,18 @@
 
 class Cartographer
 {
+    
 protected:
     long long seed;
     int x, y;
 
 
 public:
+    enum class NoiseType {
+        PERLIN
+    };
     static Cartographer typial(int width, int height);
-    void createPNG(const char *filename);
+    void createPNG(const char *filename, NoiseType noise);
 
 private:
     Cartographer(long long seed, int x, int y, std::vector<std::vector<double>>* noise_map);

@@ -56,17 +56,9 @@ void encodeOneStep(const char *filename, std::vector<unsigned char> &image, unsi
         std::cout << "encoder error " << error << ": " << lodepng_error_text(error) << std::endl;
 }
 
-void Cartographer::createPNG(const char *filename)
+void Cartographer::createPNG(const char *filename, NoiseType noise = NoiseType::PERLIN)
 {
-    // for (unsigned i; i < this->noise_map.size(); i++)
-    // {
-    //     for (unsigned j; j < this->noise_map[i].size(); j++)
-    //     {
-
-    //         // std::cout << j << std::endl;
-    //     }
-    // }
-
+    
     std::vector<unsigned char> image;
     image.resize(this->x * this->y * 4);
     for (unsigned y = 0; y < this->y; y++)
@@ -78,16 +70,6 @@ void Cartographer::createPNG(const char *filename)
             image[4 * this->x * y + 4 * x + 3] = 255;
         }
 
-    // for (unsigned y; y < this->noise_map.size(); y++)
-    // {
-    //     for (unsigned x; x < this->noise_map[y].size(); x++)
-    //     {
-    //         image[4 * x * y + 4 * x + 0] = 255 * this->noise_map[y][x];
-    //         image[4 * x * y + 4 * x + 1] = 255 * this->noise_map[y][x];
-    //         image[4 * x * y + 4 * x + 2] = 255 * this->noise_map[y][x];
-    //         image[4 * x * y + 4 * x + 3] = 255;
-    //     }
-    // }
 
     encodeOneStep(filename, image, this->x, this->y);
 }
