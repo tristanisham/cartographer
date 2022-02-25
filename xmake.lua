@@ -7,11 +7,11 @@ target("cartographer")
     set_languages("cxx20")
     add_files("src/*.cpp")
 
-target("cart_demo")
-    set_kind("binary")
-    add_deps("cartographer")
-    set_languages("cxx20")
-    add_files("src/main.cpp")
+-- target("cart_demo")
+--     set_kind("binary")
+--     add_deps("cartographer")
+--     set_languages("cxx20")
+--     add_files("src/main.cpp")
     
 
 --
