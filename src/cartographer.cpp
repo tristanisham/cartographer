@@ -22,8 +22,15 @@ Cartographer::Cartographer(long long seed, int x, int y, std::vector<std::vector
         this->noise_map = *noise_map;
     }
 }
-
-Cartographer Cartographer::typical(int width, int height)
+/**
+ * @brief Creates a typical Cartographer class with perlin noise.
+ * @param width The width of the image.
+ * @param height The height of the image.
+ * @param octives The octive metrict for the perlin noise generator.
+ * @return An instance of the Cartogrpaher class with a complete perling map. 
+ * 
+**/
+Cartographer Cartographer::typical(int width, int height, int octives)
 {
     long long ss = Cartographer::genSeed();
     
@@ -36,7 +43,7 @@ Cartographer Cartographer::typical(int width, int height)
         for (int x = 0; x < width; x++)
         {
             double nx = x / width - 0.5, ny = y / height - 0.5;
-            auto result = perlin.octave2D_01((x * 0.01), (y * 0.01), 4);
+            auto result = perlin.octave2D_01((x * 0.01), (y * 0.01), octives);
             nwidth.push_back(result);
         }
         noise_map.push_back(nwidth);
