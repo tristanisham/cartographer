@@ -2,6 +2,10 @@
 #include <ctime>
 #include <sstream>
 
+/**
+ * @brief Generates a 64 bit seed number as a long long.
+ * 
+**/
 long long Cartographer::genSeed()
 {
     std::random_device dev;
