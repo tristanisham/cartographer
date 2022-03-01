@@ -6,6 +6,7 @@ target("cartographer")
     set_strip("all")
     set_languages("cxx20")
     add_files("src/*.cpp")
+    add_defines("cartographer")
 
 -- target("cart_demo")
 --     set_kind("binary")

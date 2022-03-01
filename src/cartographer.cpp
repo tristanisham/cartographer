@@ -1,7 +1,10 @@
 #include "cartographer.hpp"
 #include <ctime>
 #include <sstream>
-
+/**
+ * @brief Generates a 64 bit seed number as a long long.
+ * 
+**/
 long long Cartographer::genSeed()
 {
     std::random_device dev;
@@ -63,7 +66,7 @@ void encodeOneStep(const char *filename, std::vector<unsigned char> &image, unsi
         std::cout << "encoder error " << error << ": " << lodepng_error_text(error) << std::endl;
 }
 
-void Cartographer::createPNG(const char *filename, NoiseType noise = NoiseType::PERLIN)
+void Cartographer::createPNG(std::string filename, NoiseType noise = NoiseType::PERLIN)
 {
     
     std::vector<unsigned char> image;
@@ -78,5 +81,5 @@ void Cartographer::createPNG(const char *filename, NoiseType noise = NoiseType::
         }
 
 
-    encodeOneStep(filename, image, this->x, this->y);
+    encodeOneStep(filename.c_str(), image, this->x, this->y);
 }

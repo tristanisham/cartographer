@@ -26,7 +26,7 @@ public:
         PERLIN
     };
     static Cartographer typical(int width, int height, int octives = 4);
-    void createPNG(const char *filename, NoiseType noise);
+    void createPNG(std::string filename, NoiseType noise);
 
 private:
     Cartographer(long long seed, int x, int y, std::vector<std::vector<double>>* noise_map);
