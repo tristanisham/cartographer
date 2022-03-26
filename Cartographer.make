@@ -63,10 +63,10 @@ endif
 GENERATED :=
 OBJECTS :=
 
-GENERATED += $(OBJDIR)/cartographer.o
-GENERATED += $(OBJDIR)/lodepng.o
-OBJECTS += $(OBJDIR)/cartographer.o
-OBJECTS += $(OBJDIR)/lodepng.o
+GENERATED += $(OBJDIR)/perlin.o
+GENERATED += $(OBJDIR)/permutationtable.o
+OBJECTS += $(OBJDIR)/perlin.o
+OBJECTS += $(OBJDIR)/permutationtable.o
 
 # Rules
 # #############################################
@@ -130,10 +130,10 @@ endif
 # File Rules
 # #############################################
 
-$(OBJDIR)/cartographer.o: src/cartographer.cpp
+$(OBJDIR)/perlin.o: src/perlin.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
-$(OBJDIR)/lodepng.o: src/lodepng.cpp
+$(OBJDIR)/permutationtable.o: src/permutationtable.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 

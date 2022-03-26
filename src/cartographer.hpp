@@ -1,36 +1,21 @@
 #pragma once
-#include <iostream>
-#include "PerlinNoise.hpp"
-#include <vector>
-#include <cassert>
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdint> // for specific size integers
-#include <fstream> // for file handling
-#include "lodepng.h"
+#include <cmath>
 #include <random>
 
-
-
-class Cartographer
+class PermutationTable
 {
-    
-protected:
-    long long seed;
-    int x, y;
-
+    u_int32_t values;
 
 public:
-    enum class NoiseType {
-        PERLIN
-    };
-    static Cartographer typical(int width, int height, int octives = 4);
-    void createPNG(std::string filename, NoiseType noise);
-
-private:
-    Cartographer(long long seed, int x, int y, std::vector<std::vector<double>>* noise_map);
-    std::vector<std::vector<double>> noise_map;
-    static long long genSeed();
+    PermutationTable(u_int seed = 0);
 };
 
+class Perlin2D
+{
+    const u_int DEFAULT_SEED = 0;
+    u_int seed;
+    PermutationTable perm_table;
+
+public:
+    Perlin2D(u_int seed = 0);
+};
