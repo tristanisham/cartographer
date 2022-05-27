@@ -1,4 +1,4 @@
-workspace "HelloWorld"
+workspace "Cartographer"
 	configurations { "Debug", "Release" }
 
 project "Cartographer"
